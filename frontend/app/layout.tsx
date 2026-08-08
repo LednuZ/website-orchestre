@@ -28,9 +28,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-serif flex flex-col">
+      <body className="min-h-full font-serif flex flex-col min-h-screen flex flex-col">
         <Navbar />
-        <main>
+        <main className="flex-1">
 
           {/* Contenu des Pages */}
           {children}

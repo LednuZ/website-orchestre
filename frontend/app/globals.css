@@ -3,12 +3,12 @@
 :root {
   --background: #fff8f5;
   --foreground: #1e1b18;
-  --primary: #570013;
+  --primary: #800020;
   --on-primary: #ffffff;
-  --secondary: #735c00;
-  --on-secondary: #ffffff;
-  --tertiary: #2b271e;
-  --on-tertiary: #ffffff;
+  --secondary: #D4AF37;
+  --on-secondary: #000000;
+  --tertiary: #e6d3af;
+  --on-tertiary: #000000;
 }
 
 @theme inline {
@@ -26,13 +26,6 @@
   /* Fonts */
   --font-sans: var(--font-playfair-sans);
   --font-mono: var(--font-playfair-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
