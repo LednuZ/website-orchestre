@@ -1,22 +1,23 @@
 export default function Page() {
     return (
         <div>
-            <h1>Présentation</h1>
-            <h2>
-                Orchestre d'Accordéon du Sundgau
-            </h2>
-            <OAS />
+            <h1 className="text-3xl text-primary font-extrabold pl-30 py-10">Présentation</h1>
+            <div className="text-black" >
+                <h2 className="text-secondary font-medium text-lg">
+                    Orchestre d'Accordéon du Sundgau
+                </h2>
+                <OAS />
 
-            <h2>
-                Orchestre des Jeunes
-            </h2>
-            <OdJ />
+                <h2 className="text-secondary font-medium text-lg">
+                    Orchestre des Jeunes
+                </h2>
+                <OdJ />
 
-            <h2>
-                École de Musique
-            </h2>
-            <EdM />
-
+                <h2 className="text-secondary font-medium text-lg">
+                    École de Musique
+                </h2>
+                <EdM />
+            </div>
         </div>
     )
 }
@@ -86,7 +87,7 @@ function EdM() {
             <p>
                 Les inscriptions sont ouvertes.
             </p>
-                {/* TODO : Mettre à jour les coordonées */}
+            {/* TODO : Mettre à jour les coordonées */}
             <p>
                 Contact: info@accordeon-sundgau.com
             </p>

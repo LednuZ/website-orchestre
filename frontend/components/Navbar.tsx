@@ -20,11 +20,11 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full shadow-sm bg-background/95 backdrop-blur" >
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-3 sm:px-4 lg:px-5">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-4 sm:px-4 lg:px-5">
 
-                {/* Logo */}
+                {/* Titre */}
                 <Link href="/" className="text-2xl text-primary font-bold tracking-tight">
-                    <span className="text-primary">Orchestre d'Accordéon du Sundgau</span>
+                    <span>Orchestre d'Accordéon du Sundgau</span>
                 </Link>
 
                 {/* Navigation Desktop */}
