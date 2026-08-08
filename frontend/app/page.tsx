@@ -47,16 +47,9 @@ export default function Home() {
     //   </main>
     // </div>
 
+    // TODO : Implémenter Page
     <div>
-      <header>
-        <h1>Header de la page</h1>
-      </header>
-      <main>
-        <h1>Site de l'Orchestre d'Accordéon du Sundgau</h1>
-      </main>
-      <footer>
-        <h3>Footer</h3>
-      </footer>
+      <h1>Site de l'Orchestre d'Accordéon du Sundgau</h1>
     </div>
   );
 }
