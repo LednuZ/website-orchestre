@@ -8,20 +8,20 @@ export default function Footer() {
 
                 {/* Colonne 1 : Nom & Description */}
                 <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-primary">
+                    <h3 className="text-2xl font-extrabold text-primary">
                         Orchestre d'Accordéon du Sundgau
                     </h3>
-                    <p className="text-sm text-on-tertiary leading-relaxed font-normal">
+                    <p className="text-sm text-on-tertiary leading-relaxed font-medium">
                         Ensemble instrumental placé sous la direction de Philippe REY. Une aventure musicale unique entre passion, virtuosité et partage.
                     </p>
                 </div>
 
                 {/* Colonne 2 : Navigation Rapide */}
                 <div className="space-y-3">
-                    <h4 className="text-base font-bold text-secondary uppercase tracking-wider">
+                    <h4 className="text-base font-bold text-primary uppercase tracking-wider">
                         Navigation
                     </h4>
-                    <ul className="space-y-2 text-sm font-normal">
+                    <ul className="space-y-2 text-sm font-medium">
                         <li>
                             <Link href="/" className="hover:text-secondary transition-colors">
                                 Accueil
@@ -29,7 +29,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <Link href="/presentation" className="hover:text-secondary transition-colors">
-                                L'Orchestre
+                                Présentation
                             </Link>
                         </li>
                         <li>
@@ -38,8 +38,18 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li>
+                            <Link href="/archives" className="hover:text-secondary transition-colors">
+                                Archives
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="/contact" className="hover:text-secondary transition-colors">
                                 Contact
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/membre" className="hover:text-secondary transition-colors">
+                                Espace Membres
                             </Link>
                         </li>
                     </ul>
@@ -47,12 +57,11 @@ export default function Footer() {
 
                 {/* Colonne 3 : Contact & Infos */}
                 <div className="space-y-3">
-                    <h4 className="text-base font-bold text-secondary uppercase tracking-wider">
+                    <h4 className="text-base font-bold text-primary uppercase tracking-wider">
                         Contact
                     </h4>
-                    <p className="text-sm text-on-secondary leading-relaxed font-normal">
+                    <p className="text-sm text-on-tertiary leading-relaxed font-normal">
                         <strong>Direction :</strong> Philippe REY<br />
-                        <strong>Région :</strong> Sundgau / Alsace<br />
                         <strong>Email :</strong> contact@orchestre-sundgau.fr
                     </p>
                 </div>
@@ -60,7 +69,7 @@ export default function Footer() {
             </div>
 
             {/* Barre de copyright en bas */}
-            <div className="border-t border-white/10 py-6 text-center text-xs text-gray-400 font-normal">
+            <div className="border-t border-white/30 py-6 text-center text-xs text-on-tertiary/50 font-normal">
                 <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p>© {new Date().getFullYear()} Orchestre d'Accordéon du Sundgau. Tous droits réservés.</p>
                     <div className="flex gap-4">
