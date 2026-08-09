@@ -13,7 +13,7 @@ export default function Page() {
                 {SECTIONS.map((section) => (
                     <section key={section.id} id={section.id}
                         className="scroll-mt-25 space-y-3 space-">
-                        <h2 className="text-primary text-xl">
+                        <h2 className="text-secondary text-xl">
                             {section.title}
                         </h2>
                         <div>

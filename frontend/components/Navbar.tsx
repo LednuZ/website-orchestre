@@ -35,7 +35,7 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`text-sm text-primary transition-colors hover: ${isActive ? 'underline underline-offset-12 font-extrabold align-super' : 'font-medium'
+                                className={`text-sm text-primary transition-colors hover:opacity-60 ${isActive ? 'underline underline-offset-12 font-extrabold align-super' : 'font-medium'
                                     }`}
                             >
                                 {link.name}
@@ -48,11 +48,12 @@ export default function Navbar() {
                 <button
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="rounded-md p-2 text-gray-600 hover:bg-gray-100 md:hidden"
-                    aria-label="Ouvrir le menu"
+                    className="rounded-lg p-2 text-primary hover:bg-primary/5 active:bg-primary/10 transition-colors md:hidden focus:outline-none"
+                    aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                    aria-expanded={isOpen}
                 >
                     <svg
-                        className="h-6 w-6"
+                        className="h-6 w-6 transition-transform duration-200"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -64,13 +65,11 @@ export default function Navbar() {
                         )}
                     </svg>
                 </button>
-            </div>
 
-            {/* Navigation Mobile */}
-            {
-                isOpen && (
-                    <nav className="border-t px-4 pb-4 pt-2 md:hidden">
-                        <div className="flex flex-col space-y-3">
+                {/* Navigation Mobile (Menu déroulant stylisé) */}
+                {isOpen && (
+                    <nav className="border-t border-primary/10 bg-background/95 backdrop-blur-md px-4 py-4 md:hidden shadow-lg animate-in slide-in-from-top-2 duration-200">
+                        <div className="flex flex-col space-y-2">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href
                                 return (
@@ -78,17 +77,23 @@ export default function Navbar() {
                                         key={link.href}
                                         href={link.href}
                                         onClick={() => setIsOpen(false)}
-                                        className={`text-sm font-medium transition-colors hover:text-blue-600 ${isActive ? 'font-semibold text-blue-600' : 'text-gray-600'
+                                        className={`px-4 py-3 rounded-lg text-base transition-all flex items-center justify-between ${isActive
+                                            ? 'bg-primary text-on-primary font-bold shadow-sm'
+                                            : 'text-foreground hover:bg-primary/5 font-medium'
                                             }`}
                                     >
-                                        {link.name}
+                                        <span>{link.name}</span>
+                                        {/* Flèche discrète à droite pour donner un effet de carte cliquable */}
+                                        <span className={`text-xs ${isActive ? 'text-on-primary' : 'text-gray-400'}`}>
+                                            →
+                                        </span>
                                     </Link>
                                 )
                             })}
                         </div>
                     </nav>
-                )
-            }
+                )}
+            </div>
         </header>
     )
 }
