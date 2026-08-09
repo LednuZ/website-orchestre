@@ -49,7 +49,7 @@ export default function Home() {
 
     // TODO : Implémenter Page
     <div>
-      <h1>Site de l'Orchestre d'Accordéon du Sundgau</h1>
+      <h1>Orchestre d'Accordéon du Sundgau</h1>
     </div>
   );
 }

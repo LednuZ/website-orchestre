@@ -1,5 +1,5 @@
 export default function Page() {
     return (
-        <h1>Page membre</h1>
+        <h1>Page Membre</h1>
     )
 }

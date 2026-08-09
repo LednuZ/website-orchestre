@@ -40,3 +40,11 @@ h3,
 h4 {
   font-weight: 700;
 }
+
+h1 {
+  font-size: 40px;
+  color: var(--primary);
+  font-size: extrabold;
+  padding-left: 30px;
+  padding-top: 35px;
+}

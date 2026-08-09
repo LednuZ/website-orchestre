@@ -1,5 +1,5 @@
 export default function Page() {
     return (
-        <h1>Mentions légales</h1>
+        <h1>Mentions Légales</h1>
     )
 }

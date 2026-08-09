@@ -2,18 +2,18 @@ export default function Page() {
     return (
         <div>
             {/* Titre */}
-            <h1 className="text-3xl text-primary font-extrabold pl-30">Présentation</h1>
+            <h1 className="text-[50px] text-primary font-extrabold pl-30 pt-5">Présentation</h1>
             {/* Barre de "navigation" pour avoir un visuel sur les autres catégories */}
             <div>
 
             </div>
 
             {/* Contenu */}
-            <div className="text-black" >
+            <div className="text-black space-y-10 pt-10" >
                 {SECTIONS.map((section) => (
                     <section key={section.id} id={section.id}
-                        className="scroll-mt-25 space-y-4">
-                        <h2>
+                        className="scroll-mt-25 space-y-3 space-">
+                        <h2 className="text-primary text-xl">
                             {section.title}
                         </h2>
                         <div>
