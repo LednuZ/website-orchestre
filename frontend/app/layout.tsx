@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} h-full antialiased`}
+      className={`${playfair.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full font-serif flex flex-col">
         <Navbar />
