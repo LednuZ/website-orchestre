@@ -16,10 +16,10 @@
 - Implémenter page /archives
 - Implémenter page /contact
 - Implémenter page /membres
-- Implémenter page /membres
+- Implémenter page /membres  
+  
 
-
-- Mettre à jour les pages de présentation
+- Mettre à jour les pages de présentation  
 
 - Compléter la page "Mentions Légales"
-- Compléter la page "Politique de Confidentialité"
+- Compléter la page "Politique de Confidentialité"  

@@ -19,7 +19,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="sticky top-0 z-50 w-full shadow-sm bg-background/95 backdrop-blur" >
+        <header className="sticky top-0 z-50 relative w-full shadow-sm bg-background/95 backdrop-blur-md" >
             <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-4 sm:px-4 lg:px-5">
 
                 {/* Titre */}
@@ -68,7 +68,7 @@ export default function Navbar() {
 
                 {/* Navigation Mobile (Menu déroulant stylisé) */}
                 {isOpen && (
-                    <nav className="border-t border-primary/10 bg-background/95 backdrop-blur-md px-4 py-4 md:hidden shadow-lg animate-in slide-in-from-top-2 duration-200">
+                    <nav className="border-t border-primary/10 bg-background/95 backdrop-blur-md px-4 py-4 md:hidden shadow-lg animate-in slide-in-from-top-2 duration-200 absolute top-full left-0 right-0">
                         <div className="flex flex-col space-y-2">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href
