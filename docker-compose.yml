@@ -25,7 +25,7 @@ services:
 
   web:
     build:
-      context: ./frontend
+      context: ./src
       dockerfile: Dockerfile
     container_name: orchestre_frontend
     restart: always
@@ -34,12 +34,11 @@ services:
     environment:
       - WATCHPACK_POLLING=true
     volumes:
-      - ./frontend:/app
+      - ./src:/app
       - /app/node_modules
       - /app/.next
     depends_on:
       - postgres
-    command: sh -c "npx prisma db push && npx prisma db seed && npm run dev"
 
 volumes:
   postgres_data:

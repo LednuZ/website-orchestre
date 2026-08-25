@@ -51,7 +51,7 @@ h1 {
   font-size: 25px;
   color: var(--primary);
   font-size: extrabold;
-  padding-left: 30px;
+  text-align: center;
   padding-top: 35px;
 }
 
@@ -61,7 +61,7 @@ h1 {
     font-size: 40px;
     color: var(--primary);
     font-size: extrabold;
-    padding-left: 30px;
+    text-align: center;
     padding-top: 35px;
   }
 }

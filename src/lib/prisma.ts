@@ -1,4 +1,4 @@
-import { Pool } from '@/node_modules/@types/pg'
+import { Pool } from 'pg'
 import { PrismaClient } from "../app/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { Prisma } from '@prisma/client/extension';
