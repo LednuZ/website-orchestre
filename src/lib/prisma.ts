@@ -1,4 +1,4 @@
-import { Pool } from 'pg'
+import { Pool } from '@/node_modules/@types/pg'
 import { PrismaClient } from "../app/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { Prisma } from '@prisma/client/extension';
@@ -19,5 +19,5 @@ const globalForPrisma = globalThis as unknown as {
 export const prisma =
     globalForPrisma.prisma ??
     new PrismaClient({ adapter })
-    
+
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
