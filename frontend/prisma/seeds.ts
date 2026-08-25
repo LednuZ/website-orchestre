@@ -26,6 +26,7 @@ const userData: Prisma.MembreCreateInput[] = [
 ]
 
 export async function main() {
+    await prisma.membre.deleteMany()
     for (const m of userData) {
         await prisma.membre.create({ data: m });
     }

@@ -2,7 +2,7 @@
 
 import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
-// import { prisma } from 
+import { prisma } from '@/lib/prisma'
 import bcrypt from 'bcryptjs'
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -16,7 +16,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 if (!credentials?.email || !credentials?.password) return null
 
                 // 1. Chercher l'utilisateur en BDD
-                const user = await prisma.user.findUnique({
+                const user = await prisma.membre.findUnique({
                     where: { email: credentials.email as string },
                 })
 
@@ -30,7 +30,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
                 if (!passwordsMatch) return null
 
-                return { id: user.id, name: user.name, email: user.email }
+                return { id: user.id, name: user.nom, email: user.email }
             },
         }),
     ],

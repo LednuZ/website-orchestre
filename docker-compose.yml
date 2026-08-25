@@ -32,9 +32,14 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://postgres:mysecretpassword@postgres:5432/sundgau_orchestre?schema=public
+      - WATCHPACK_POLLING=true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
     depends_on:
       - postgres
+    command: sh -c "npx prisma db push && npx prisma db seed && npm run dev"
 
 volumes:
   postgres_data:
