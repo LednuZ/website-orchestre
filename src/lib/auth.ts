@@ -7,7 +7,7 @@ const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET)
 export async function getSessionUser() {
     try {
         const cookieStore = await cookies()
-        const token = cookieStore.get('token')?.value
+        const token = cookieStore.get('auth_token')?.value
 
         if (!token) return null
 

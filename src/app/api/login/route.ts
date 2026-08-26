@@ -40,13 +40,15 @@ export async function POST(request: Request) {
             )
         }
 
-        const token = await new SignJWT({ id: membre.id, email: membre.email })
+
+        // Génération du cookie JWT
+        const token = await new SignJWT({ id: membre.id, email: membre.email, admin: membre.admin, verif: membre.verif })
             .setProtectedHeader({ alg: 'HS256' })
             .setExpirationTime('30d')
             .sign(JWT_SECRET)
 
         const cookieStore = await cookies()
-        cookieStore.set('token', token, {
+        cookieStore.set('auth_token', token, {
             httpOnly: true, // Inaccessible depuis JavaScript 
             secure: process.env.NODE_ENV === 'production', // Uniquement sur HTTPS en prod
             sameSite: 'lax', // Protection CSRF

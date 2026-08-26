@@ -1,4 +1,3 @@
-import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 import { getSessionUser } from '@/lib/auth'
 import LogoutButton from '@/components/ui/LogoutButton'
@@ -13,6 +12,21 @@ export default async function Page() {
                 <div>
                     <h2>Bienvenue {user.prenom}</h2>
                     <div className='py-3'><LogoutButton /></div>
+
+                    {user.admin &&
+                        (
+                            <div>
+                                {/* Gestion des evenements */}
+
+                                {/* Gestion des membres  */}
+
+                                {/* Gestion des formulaires de contact */}
+                                <Link href='/membre/admin/contact'></Link>
+
+                            </div>
+                        )
+                    }
+
                 </div>
             ) : (
                 <div>
