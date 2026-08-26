@@ -21,8 +21,10 @@ export async function POST(request: Request) {
             )
         }
 
+        const cleanEmail = email?.trim().toLowerCase()
+
         const membre = await prisma.membre.findUnique({
-            where: { email },
+            where: { email: cleanEmail },
         })
 
         if (membre) {
@@ -38,9 +40,17 @@ export async function POST(request: Request) {
             data: {
                 nom,
                 prenom,
-                email,
+                email: cleanEmail,
                 password: hashedPassword,
             },
+            select: {
+                id: true,
+                nom: true,
+                prenom: true,
+                email: true,
+                verif: true,
+                admin: true,
+            }
         })
 
         if (!newMembre) {
@@ -50,33 +60,10 @@ export async function POST(request: Request) {
             )
         }
 
-        const response = await fetch('/api/login',
-            {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password }),
-            })
-
-        const data = await response.json()
-
-        if (!response.ok) {
-            return NextResponse.json({
-                message: "Inscription réussie.",
-                membre: {
-                    id: data.membre.id,
-                    nom: data.membre.nom,
-                    prenom: data.membre.prenom,
-                    verif: data.membre.verif,
-                    admin: data.membre.admin,
-                }
-            })
-        } else {
-            return NextResponse.json({
-                error: "Erreur lors de la connexion"
-            },
-                { status: 501 },
-            )
-        }
+        return NextResponse.json({
+            message: "Inscription réussie.",
+            membre: newMembre
+        }, { status: 201 })
 
 
     }

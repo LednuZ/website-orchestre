@@ -18,8 +18,10 @@ export async function POST(request: Request) {
             )
         }
 
+        const cleanEmail = email?.trim().toLowerCase()
+
         const membre = await prisma.membre.findUnique({
-            where: { email },
+            where: { email: cleanEmail },
         })
 
         if (!membre) {

@@ -39,9 +39,16 @@ export default function RegisterForm() {
 
             if (!response.ok) {
                 setMessage(`Erreur : ${data.error}`)
-            } else {
-                setMessage(`Bienvenue ${data.membre.prenom} `)
-                router.push("/membre")
+            }
+
+            const resLogin = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            })
+
+            if (resLogin.ok) {
+                router.push('/membre')
             }
         }
         catch (error) {
