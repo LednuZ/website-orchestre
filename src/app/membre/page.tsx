@@ -21,7 +21,7 @@ export default async function Page() {
                                 {/* Gestion des membres  */}
 
                                 {/* Gestion des formulaires de contact */}
-                                <Link href='/membre/admin/contact'></Link>
+                                <Link href='/membre/admin/contact'></Link>  
 
                             </div>
                         )
