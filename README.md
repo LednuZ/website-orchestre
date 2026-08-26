@@ -23,3 +23,5 @@
 
 - Compléter la page "Mentions Légales"
 - Compléter la page "Politique de Confidentialité"  
+
+- Rajouter les liens d'autres réseaux (Yt, Ig, Fb)
