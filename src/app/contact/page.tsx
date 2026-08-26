@@ -1,5 +1,10 @@
+import ContactForm from "./contactForm"
+
 export default function Page() {
     return (
-        <h1>Page Contact</h1>
+        <div>
+            <h1>Nous Contacter</h1>
+            <ContactForm />
+        </div>
     )
 }
