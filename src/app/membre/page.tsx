@@ -17,11 +17,12 @@ export default async function Page() {
                         (
                             <div>
                                 {/* Gestion des evenements */}
-
                                 {/* Gestion des membres  */}
 
                                 {/* Gestion des formulaires de contact */}
-                                <Link href='/membre/admin/contact'></Link>  
+                                <p className='hover:font-bold text-primary'>
+                                    <Link href='/membre/admin/contact'>Gestion des formulaires de contact</Link>
+                                </p>
 
                             </div>
                         )

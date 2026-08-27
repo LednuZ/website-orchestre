@@ -25,3 +25,6 @@
 - Compléter la page "Politique de Confidentialité"  
 
 - Rajouter les liens d'autres réseaux (Yt, Ig, Fb)
+
+
+- Fonctionnalité anti-bots pour le formulaire de contact
