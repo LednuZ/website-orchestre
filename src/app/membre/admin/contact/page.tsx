@@ -1,5 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
+import ToggleButtonLu from './toogleButtonLu'
+import DeleteButton from './deleteButton'
 
 const ITEMS_PER_PAGE = 10
 
@@ -21,7 +23,7 @@ export default async function AdminContactPage({ searchParams }: PageProps) {
     })
 
     return (
-        <div>
+        <div className='w-full'>
             <h1>Gestion des formulaires de contact</h1>
             <ul className='flex flex-col'>
                 {forms.map((form) => (
@@ -39,8 +41,9 @@ export default async function AdminContactPage({ searchParams }: PageProps) {
                             </span>
                         </div>
                         <span className='bg-white rounded text-black block mt-5 p-3'>{form.message}</span>
-                        <div className='mt-3'>
-                            Ici mettre marquer comme lu et supprimer message
+                        <div className='mt-3 flex flex-row justify-between items-center'>
+                            <ToggleButtonLu id={form.id} estLu={form.lu} />
+                            <DeleteButton id={form.id} />
                         </div>
                     </li>
                 ))}

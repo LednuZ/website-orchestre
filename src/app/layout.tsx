@@ -30,7 +30,8 @@ export default function RootLayout({
     >
       <body className="min-h-full font-serif flex flex-col">
         <Navbar />
-        <main className="flex-1 px-20 pt-5 max-w-7xl mx-auto">
+        {/* <main className="flex-1 px-20 pt-5 max-w-7xl w-full mx-auto"> */}
+        <main className="flex-1 max-w-full w-full mx-auto">
 
           {/* Contenu des Pages */}
           {children}

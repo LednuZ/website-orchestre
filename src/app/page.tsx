@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -48,8 +49,16 @@ export default function Home() {
     // </div>
 
     // TODO : Implémenter Page
+
+
     <div>
-      <h1>Orchestre d'Accordéon du Sundgau</h1>
-    </div>
+      <div className="relative w-full h-[80vh] aspect-auto bg-cover bg-center flex items-start justify-center text-white mask-b-from-85%"
+        style={{ backgroundImage: "url('/img/jas_montargis.jpg')" }}>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center px-4 pt-25">
+          <p className="text-4xl text-white font-black md:text-7xl">Orchestre d'Accordéon du Sundgau</p>
+        </div>
+      </div>
+    </div >
   );
 }

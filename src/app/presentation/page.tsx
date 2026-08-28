@@ -5,7 +5,7 @@ export default function Page() {
             <h1 className="text-[50px] text-primary font-extrabold py-5">Présentation</h1>
 
             {/* Contenu */}
-            <div className="font-large text-white space-y-10 pt-10" >
+            <div className="font-large text-white space-y-10 pt-5 text-justify" >
                 {SECTIONS.map((section) => (
                     <section key={section.id} id={section.id}
                         className="scroll-mt-25 space-y-3 px-30 py-10 bg-primary-box rounded-3xl">
@@ -14,7 +14,7 @@ export default function Page() {
                         </h2>
                         <div>
                             {section.paragraphs.map((parag, index) => (
-                                <p key={index}>
+                                <p key={index} className="mt-3">
                                     {parag}
                                 </p>
                             ))}
